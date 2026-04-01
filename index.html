@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Walabuma Frontend Dev | Study Portal + Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="app-container">
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">
+            <h2>Walabuma <span>✦ Frontend Dev</span></h2>
+            <p class="logo-sub">Study & Registration Portal</p>
+        </div>
+        <div class="nav-links">
+            <button class="nav-btn active" data-page="home"><i class="fas fa-home"></i> Home</button>
+            <button class="nav-btn" data-page="about"><i class="fas fa-info-circle"></i> About</button>
+            <button class="nav-btn" data-page="courses"><i class="fas fa-code"></i> Courses</button>
+            <button class="nav-btn" data-page="contact"><i class="fas fa-envelope"></i> Contact</button>
+            <button class="nav-btn" data-page="register"><i class="fas fa-user-plus"></i> Register</button>
+            <button class="nav-btn" data-page="admin"><i class="fas fa-user-shield"></i> Admin</button>
+        </div>
+        <div class="admin-badge">
+            <i class="fas fa-crown"></i> Admin Access
+        </div>
+    </div>
+
+    <div class="panels">
+        <!-- HOME PAGE -->
+        <div id="home-page" class="page active-page">
+            <div class="hero">
+                <h1>Welcome to Walabuma <span class="highlight">Frontend Development</span> Study Hub</h1>
+                <p>Master HTML, CSS, JavaScript, and modern frameworks. Join our community of passionate developers!</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card"><i class="fab fa-html5"></i><h3>HTML5</h3><p>Semantic markup & structure</p></div>
+                <div class="feature-card"><i class="fab fa-css3-alt"></i><h3>CSS3</h3><p>Flexbox, Grid, Animations</p></div>
+                <div class="feature-card"><i class="fab fa-js"></i><h3>JavaScript</h3><p>ES6+, DOM manipulation</p></div>
+                <div class="feature-card"><i class="fab fa-react"></i><h3>React.js</h3><p>Component-based UI</p></div>
+                <div class="feature-card"><i class="fas fa-database"></i><h3>LocalStorage</h3><p>Client-side data persistence</p></div>
+                <div class="feature-card"><i class="fas fa-users"></i><h3>Community</h3><p>Learn together, grow together</p></div>
+            </div>
+            <div class="cta-section">
+                <button class="btn-register" id="homeRegBtn"><i class="fas fa-arrow-right"></i> Start Your Journey →</button>
+                <button class="btn-secondary" id="viewCoursesBtn"><i class="fas fa-graduation-cap"></i> View Courses</button>
+            </div>
+        </div>
+
+        <!-- ABOUT PAGE -->
+        <div id="about-page" class="page">
+            <div class="info-card">
+                <h2><i class="fas fa-rocket"></i> About Walabuma Frontend Dev</h2>
+                <p><strong>Walabuma Frontend Development Study</strong> is a premier learning platform dedicated to empowering Ethiopian developers and aspiring frontend engineers. Our mission is to provide high-quality, accessible education in modern web technologies.</p>
+                <br>
+                <h3><i class="fas fa-bullseye"></i> Our Vision</h3>
+                <p>To become Ethiopia's leading frontend development community, fostering innovation and technical excellence.</p>
+                <br>
+                <h3><i class="fas fa-chalkboard-user"></i> What We Offer</h3>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>✅ Comprehensive frontend curriculum</li>
+                    <li>✅ Hands-on projects and real-world applications</li>
+                    <li>✅ Mentorship from industry professionals</li>
+                    <li>✅ Community meetups and hackathons</li>
+                    <li>✅ Career guidance and portfolio building</li>
+                </ul>
+                <br>
+                <p><strong>✨ Admin Features:</strong> Complete user management system to track registered students.</p>
+                <p><strong>📍 Ethiopian Focus:</strong> Specialized for Ethiopian students with local city selections.</p>
+            </div>
+        </div>
+
+        <!-- COURSES PAGE -->
+        <div id="courses-page" class="page">
+            <div class="courses-container">
+                <h2><i class="fas fa-graduation-cap"></i> Our Frontend Courses</h2>
+                <p class="courses-subtitle">Comprehensive curriculum designed for modern web development</p>
+                
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-icon"><i class="fab fa-html5"></i></div>
+                        <h3>HTML5 Mastery</h3>
+                        <p>Semantic HTML, forms, accessibility, SEO basics, and modern HTML features.</p>
+                        <span class="course-level">Beginner</span>
+                        <span class="course-duration">4 Weeks</span>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-icon"><i class="fab fa-css3-alt"></i></div>
+                        <h3>CSS3 Advanced</h3>
+                        <p>Flexbox, Grid, animations, responsive design, Tailwind CSS, and SASS.</p>
+                        <span class="course-level">Intermediate</span>
+                        <span class="course-duration">6 Weeks</span>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-icon"><i class="fab fa-js"></i></div>
+                        <h3>JavaScript Core</h3>
+                        <p>ES6+, DOM manipulation, async programming, APIs, and modern JS patterns.</p>
+                        <span class="course-level">Intermediate</span>
+                        <span class="course-duration">8 Weeks</span>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-icon"><i class="fab fa-react"></i></div>
+                        <h3>React.js Ecosystem</h3>
+                        <p>Components, hooks, state management, routing, and Next.js basics.</p>
+                        <span class="course-level">Advanced</span>
+                        <span class="course-duration">10 Weeks</span>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Responsive Design</h3>
+                        <p>Mobile-first approach, media queries, cross-browser compatibility.</p>
+                        <span class="course-level">Beginner</span>
+                        <span class="course-duration">3 Weeks</span>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Dev Tools & Workflow</h3>
+                        <p>Git, GitHub, VS Code, debugging, and deployment strategies.</p>
+                        <span class="course-level">All Levels</span>
+                        <span class="course-duration">4 Weeks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT PAGE -->
+        <div id="contact-page" class="page">
+            <div class="info-card contact-card">
+                <h2><i class="fas fa-address-card"></i> Contact Walabuma Team</h2>
+                <p>Have questions? Reach out to our support team or connect with us on social media.</p>
+                <div class="contact-details-modern">
+                    <div class="contact-item"><i class="fas fa-envelope"></i> <strong>Email:</strong> hello@walabuma.com</div>
+                    <div class="contact-item"><i class="fas fa-phone"></i> <strong>Phone:</strong> +251 911 234 567</div>
+                    <div class="contact-item"><i class="fab fa-telegram"></i> <strong>Telegram:</strong> @walabuma_dev</div>
+                    <div class="contact-item"><i class="fab fa-github"></i> <strong>GitHub:</strong> github.com/walabuma</div>
+                    <div class="contact-item"><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> Walabuma Frontend Dev</div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Addis Ababa, Ethiopia</div>
+                </div>
+                <div class="office-hours">
+                    <i class="fas fa-clock"></i> Support Hours: Monday - Friday, 9:00 AM - 6:00 PM (EAT)
+                </div>
+            </div>
+        </div>
+
+        <!-- REGISTRATION PAGE with Ethiopian Cities Dropdown -->
+        <div id="register-page" class="page">
+            <div class="reg-form-container">
+                <div class="reg-header">
+                    <h2><i class="fas fa-id-card"></i> Student Registration</h2>
+                    <p>Join Walabuma Frontend Dev — Ethiopian students welcome!</p>
+                </div>
+                <form id="registrationForm" novalidate>
+                    <div class="inline-group">
+                        <div class="form-group"><label>First Name *</label><input type="text" id="firstName" placeholder="John"><div class="error-message" id="firstNameError" style="display:none;"></div></div>
+                        <div class="form-group"><label>Last Name *</label><input type="text" id="lastName" placeholder="Doe"><div class="error-message" id="lastNameError" style="display:none;"></div></div>
+                    </div>
+                    
+                    <div class="form-group"><label>Email *</label><input type="email" id="email" placeholder="hello@walabuma.com"><div class="error-message" id="emailError" style="display:none;"></div></div>
+                    
+                    <div class="form-group"><label>Phone Number *</label><input type="tel" id="phone" placeholder="+251 912 345 678"><div class="error-message" id="phoneError" style="display:none;"></div></div>
+                    
+                    <div class="form-group"><label>Password *</label><input type="password" id="password" placeholder="Min 6 characters"><div class="error-message" id="passwordError" style="display:none;"></div></div>
+                    
+                    <div class="form-group"><label>Confirm Password</label><input type="password" id="confirmPwd"><div class="error-message" id="confirmError" style="display:none;"></div></div>
+                    
+                    <div class="form-group"><label>Date of Birth</label><input type="date" id="dob"><div class="error-message" id="dobError" style="display:none;"></div></div>
+                    
+                    <div class="form-group"><label>Gender</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="Male"> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                            <label><input type="radio" name="gender" value="Other"> Other</label>
+                        </div>
+                    </div>
+                    
+                    <div class="inline-group">
+                        <div class="form-group"><label>Country *</label>
+                            <select id="country">
+                                <option value="Ethiopia" selected>Ethiopia</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label>Region / State</label>
+                            <select id="region">
+                                <option value="">Select Region</option>
+                                <option value="Addis Ababa">Addis Ababa</option>
+                                <option value="Afar">Afar</option>
+                                <option value="Amhara">Amhara</option>
+                                <option value="Benishangul-Gumuz">Benishangul-Gumuz</option>
+                                <option value="Dire Dawa">Dire Dawa</option>
+                                <option value="Gambela">Gambela</option>
+                                <option value="Harari">Harari</option>
+                                <option value="Oromia">Oromia</option>
+                                <option value="Sidama">Sidama</option>
+                                <option value="Somali">Somali</option>
+                                <option value="South West Ethiopia">South West Ethiopia</option>
+                                <option value="Southern Nations">Southern Nations</option>
+                                <option value="Tigray">Tigray</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="inline-group">
+                        <div class="form-group"><label>City / Town *</label>
+                            <select id="city">
+                                <option value="">Select Ethiopian City</option>
+                                <option value="Addis Ababa">Addis Ababa</option>
+                                <option value="Jimma">Jimma</option>
+                                <option value="Shambu">Shambu</option>
+                                <option value="Nekemete">Nekemete</option>
+                                <option value="Harar">Harar</option>
+                                <option value="Dire Dawa">Dire Dawa</option>
+                                <option value="Bahir Dar">Bahir Dar</option>
+                                <option value="Gondar">Gondar</option>
+                                <option value="Mekelle">Mekelle</option>
+                                <option value="Adama">Adama (Nazret)</option>
+                                <option value="Dessie">Dessie</option>
+                                <option value="Hawassa">Hawassa</option>
+                                <option value="Jijiga">Jijiga</option>
+                                <option value="Debre Birhan">Debre Birhan</option>
+                                <option value="Arba Minch">Arba Minch</option>
+                                <option value="Bishoftu">Bishoftu</option>
+                                <option value="Ambo">Ambo</option>
+                                <option value="Wolaita Sodo">Wolaita Sodo</option>
+                                <option value="Assosa">Assosa</option>
+                                <option value="Gambela Town">Gambela Town</option>
+                                <option value="Semera">Semera</option>
+                                <option value="Debre Tabor">Debre Tabor</option>
+                                <option value="Axum">Axum</option>
+                                <option value="Lalibela">Lalibela</option>
+                            </select>
+                            <div class="error-message" id="cityError" style="display:none;"></div>
+                        </div>
+                        <div class="form-group"><label>Place of Birth *</label>
+                            <select id="birthPlace">
+                                <option value="">Select Place of Birth</option>
+                                <option value="Addis Ababa">Addis Ababa</option>
+                                <option value="Jimma">Jimma</option>
+                                <option value="Shambu">Shambu</option>
+                                <option value="Nekemete">Nekemete</option>
+                                <option value="Harar">Harar</option>
+                                <option value="Dire Dawa">Dire Dawa</option>
+                                <option value="Bahir Dar">Bahir Dar</option>
+                                <option value="Gondar">Gondar</option>
+                                <option value="Mekelle">Mekelle</option>
+                                <option value="Adama">Adama</option>
+                                <option value="Dessie">Dessie</option>
+                                <option value="Hawassa">Hawassa</option>
+                                <option value="Other">Other City</option>
+                            </select>
+                            <div class="error-message" id="birthPlaceError" style="display:none;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Interested Course</label>
+                        <select id="courseInterest">
+                            <option value="">Select a course</option>
+                            <option value="HTML5 Mastery">HTML5 Mastery</option>
+                            <option value="CSS3 Advanced">CSS3 Advanced</option>
+                            <option value="JavaScript Core">JavaScript Core</option>
+                            <option value="React.js Ecosystem">React.js Ecosystem</option>
+                            <option value="Responsive Design">Responsive Design</option>
+                            <option value="Dev Tools & Workflow">Dev Tools & Workflow</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-register"><i class="fas fa-check-circle"></i> Register Now</button>
+                    <div id="formFeedback"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- ADMIN PANEL PAGE -->
+        <div id="admin-page" class="page">
+            <div class="admin-container">
+                <div class="admin-header">
+                    <h2><i class="fas fa-user-shield"></i> Admin Dashboard - Student Management</h2>
+                    <div class="stats-badge" id="userStats">Total Students: 0</div>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="user-table" id="userTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>City</th>
+                                <th>Birth Place</th>
+                                <th>Region</th>
+                                <th>Course</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody">
+                            <tr><td colspan="9" class="empty-state">📭 No students registered yet. Add via registration form.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="admin-actions">
+                    <button id="clearAllUsersBtn" class="btn-register btn-danger"><i class="fas fa-trash-alt"></i> Delete All Students</button>
+                    <button id="refreshAdminBtn" class="btn-register btn-success"><i class="fas fa-sync-alt"></i> Refresh Data</button>
+                    <button id="exportDataBtn" class="btn-register btn-info"><i class="fas fa-download"></i> Export Data</button>
+                </div>
+                <div id="adminFeedback" style="margin-top: 1rem;"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p><i class="far fa-copyright"></i> 2026 Walabuma Frontend Development Study — Empowering Ethiopian Developers</p>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
